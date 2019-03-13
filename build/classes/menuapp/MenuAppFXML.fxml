@@ -21,12 +21,12 @@
          <children>
             <MenuBar>
               <menus>
-                <Menu text="_Archivo">
+                <Menu mnemonicParsing="false" text="%menu.Archivo">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Salir" />
                   </items>
                 </Menu>
-                <Menu text="_Lanzar">
+                <Menu mnemonicParsing="false" text="_Lanzar">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Amazon" />
                         <MenuItem mnemonicParsing="false" text="Blogger" />
@@ -35,7 +35,7 @@
                         <MenuItem mnemonicParsing="false" text="Google+" />
                   </items>
                 </Menu>
-                <Menu text="_Opciones">
+                <Menu mnemonicParsing="false" text="_Opciones">
                   <items>
                         <Menu mnemonicParsing="false" text="Comprar en">
                            <items>

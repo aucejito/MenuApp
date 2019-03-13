@@ -8,6 +8,7 @@ package menuapp;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Observable;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -52,7 +53,7 @@ public class MenuAppFXMLController implements Initializable {
     
     Optional<String> resultBlog;
     
-    
+    private ResourceBundle bundle;
     
     
     private void handleButtonAction(ActionEvent event) {
@@ -62,7 +63,8 @@ public class MenuAppFXMLController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // label.textProperty().bind(resultBlog.get());
+       //Locale.setDefault(new Locale("en", "GB"));
+       bundle = rb;
         
     }    
 
@@ -131,4 +133,7 @@ public class MenuAppFXMLController implements Initializable {
     private void googleAct(ActionEvent event) {
     }
     
+    private void updateLabel(String key){
+        label.setText(bundle.getString(key));
+    }
 }

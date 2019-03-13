@@ -5,6 +5,8 @@
  */
 package menuapp;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,10 +21,13 @@ public class MenuApp extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MenuAppFXML.fxml"));
         
+        Locale locale = Locale.getDefault();
+        ResourceBundle bundle = ResourceBundle.getBundle("menuapp.base", locale);
+        
+        Parent root = FXMLLoader.load(getClass().getResource("MenuAppFXML.fxml"), bundle);
+              
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
     }
